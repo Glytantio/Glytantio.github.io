@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; }
+    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--text)}
+    header{max-width:900px;margin:48px auto 0;padding:0 16px}
+    .hero{background:linear-gradient(135deg,#1f2937,transparent);border-radius:24px;padding:32px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px}
+    .tag{color:var(--muted);margin:0 0 16px}
+    a.btn{display:inline-block;padding:10px 16px;border-radius:999px;background:var(--accent);color:#0b1220;text-decoration:none;font-weight:600}
+    main{max-width:1000px;margin:32px auto;padding:0 16px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:20px;padding:20px}
+    .card h3{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    footer{max-width:900px;margin:40px auto 80px;padding:0 16px;color:var(--muted);text-align:center}
+    img.thumb{width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:12px;border:1px solid #1f2937}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <h1>Your Name</h1>
+      <p class="tag">Front-End Developer • QA Enthusiast</p>
+      <a class="btn" href="mailto:you@example.com">Contact Me</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="card">
+      <img class="thumb" src="https://picsum.photos/800/400?1" alt="Project screenshot">
+      <h3>Project One</h3>
+      <p>A short sentence about what it does and why it’s cool.</p>
+      <p class="meta"><a href="#" target="_blank">Live Demo</a> • <a href="#" target="_blank">Source</a></p>
+    </article>
+
+    <article class="card">
+      <img class="thumb" src="https://picsum.photos/800/400?2" alt="Project screenshot">
+      <h3>Project Two</h3>
+      <p>What tech you used, what problem it solves, and your role.</p>
+      <p class="meta"><a href="#" target="_blank">Live Demo</a> • <a href="#" target="_blank">Source</a></p>
+    </article>
+
+    <article class="card">
+      <img class="thumb" src="https://picsum.photos/800/400?3" alt="Project screenshot">
+      <h3>About Me</h3>
+      <p>1–2 sentences about your background, strengths, and interests.</p>
+      <p class="meta">Pasig, PH • Open to work</p>
+    </article>
+  </main>
+
+  <footer>© <span id="y"></span> Your Name</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
