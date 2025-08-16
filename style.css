@@ -1,79 +1,80 @@
-.carousel-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd; /* Light background */
+    color: #222; /* Dark text */
+    margin: 0;
+    padding: 0;
 }
 
-.carousel-slide {
-  display: none;
-  position: relative;
-  text-align: center;
+/* Header Styling */
+header {
+    background-color: #222; /* Dark accent */
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.carousel-slide img {
-  width: 100%;
-  border-radius: 10px;
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
-.caption {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+nav {
+    margin-top: 10px;
 }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.3s;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+nav a {
+    color: #ffcc00; /* Highlight color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+nav a:hover {
+    background-color: #ffcc00;
+    color: #222;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+/* Main Section */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.dots {
-  text-align: center;
-  margin-top: 10px;
+/* Resume Viewer Heading */
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+/* Download Button */
+.btn {
+    background-color: #222; /* Dark button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.btn:hover {
+    background-color: #ffcc00; /* Accent hover */
+    color: #222;
 }
 
-/* Fade animation */
-.fade {
-  animation: fadeEffect 1s ease-in-out;
-}
-
-@keyframes fadeEffect {
-  from { opacity: .4 }
-  to { opacity: 1 }
+/* Footer Styling */
+footer {
+    background-color: #222; /* Dark accent */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
 }
