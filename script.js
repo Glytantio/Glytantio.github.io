@@ -1,13 +1,15 @@
-let index = 0;
-const carousel = document.querySelector('.carousel');
-const totalProjects = document.querySelectorAll('.project').length;
+// script.js
 
-document.querySelector('.next').addEventListener('click', () => {
-    index = (index + 1) % totalProjects;
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-});
+let slideIndex = 0;
+showSlides();
 
-document.querySelector('.prev').addEventListener('click', () => {
-    index = (index - 1 + totalProjects) % totalProjects;
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-});
+function showSlides() {
+    let slides = document.getElementsByClassName("carousel-slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }    
+    slides[slideIndex - 1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
