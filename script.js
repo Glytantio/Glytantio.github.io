@@ -1,58 +1,24 @@
-// script.js — robust carousel logic
+let currentIndex = 0;
 
-(function () {
-  const root = document.getElementById('projectsCarousel');
-  if (!root) return;
+function showSlide(index) {
+    const carousel = document.querySelector('.carousel');
+    const totalItems = document.querySelectorAll('.carousel-item').length;
 
-  const track = root.querySelector('.track');
-  const slides = Array.from(root.querySelectorAll('.slide'));
-  const prevBtn = root.querySelector('.prev');
-  const nextBtn = root.querySelector('.next');
-  const dots = Array.from(root.querySelectorAll('.dot'));
+    if (index >= totalItems) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalItems - 1;
+    } else {
+        currentIndex = index;
+    }
 
-  let index = 0;
-  let timer;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-  function update() {
-    // Move the track
-    track.style.transform = `translateX(-${index * 100}%)`;
+document.querySelector('.carousel-btn.left').addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+});
 
-    // Update dots
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
-  }
-
-  function go(n) {
-    index = (n + slides.length) % slides.length;
-    update();
-    restartAuto();
-  }
-
-  function next() { go(index + 1); }
-  function prev() { go(index - 1); }
-
-  function startAuto() {
-    timer = setInterval(next, 4000); // auto-advance every 4s
-  }
-
-  function stopAuto() {
-    clearInterval(timer);
-  }
-
-  function restartAuto() {
-    stopAuto();
-    startAuto();
-  }
-
-  // Events
-  nextBtn.addEventListener('click', next);
-  prevBtn.addEventListener('click', prev);
-  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
-
-  // Pause on hover (desktop)
-  root.addEventListener('mouseenter', stopAuto);
-  root.addEventListener('mouseleave', startAuto);
-
-  // Init
-  update();
-  startAuto();
-})();
+document.querySelector('.carousel-btn.right').addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+});
