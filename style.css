@@ -166,3 +166,26 @@ main {
   background: #444;
   transform: translateY(-2px);
 }
+
+/* Resume Page */
+.resume-viewer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 600px; /* Smaller than before */
+  border: none;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .resume-viewer iframe {
+    height: 400px;
+  }
+}
