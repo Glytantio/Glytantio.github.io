@@ -1,88 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #fdfdfd;
-    color: #222;
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* Hero Section */
-.hero {
-    background-color: #222;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-}
-.hero.small {
-    padding: 30px 20px;
-}
-.highlight {
-    color: #f9c74f;
-}
-.cta-btn {
-    display: inline-block;
-    background-color: #f9c74f;
-    color: #222;
-    padding: 10px 20px;
-    margin-top: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-.cta-btn:hover {
-    background-color: #ffd166;
+.carousel-slide {
+  display: none;
+  position: relative;
+  text-align: center;
 }
 
-/* Sections */
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-h2 {
-    color: #222;
-    margin-bottom: 10px;
+.carousel-slide img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* Carousel */
-.carousel {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
-}
-.carousel-item {
-    flex: 0 0 250px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    scroll-snap-align: start;
-}
-.carousel-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.carousel-item a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #f9c74f;
-    text-decoration: none;
-}
-.carousel-item a:hover {
-    text-decoration: underline;
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
-/* Contact Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
-footer a {
-    color: #f9c74f;
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fade animation */
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: .4 }
+  to { opacity: 1 }
 }
