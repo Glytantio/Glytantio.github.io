@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreico Karlo | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dreico Karlo | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Hello, I'm <span class="highlight">Dreico Karlo</span></h1>
-        <p>Aspiring Game QA | IT Graduate | Tech Enthusiast</p>
-        <a href="resume.html" class="cta-btn">View My Resume</a>
-    </header>
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Hello, I'm <span class="highlight">Dreico Karlo</span></h1>
+    <p>Aspiring Game QA • IT Graduate • Tech Enthusiast</p>
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="https://github.com/glytantio" target="_blank" class="nav-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/glytantio" target="_blank" class="nav-link">LinkedIn</a>
+    </nav>
+    <a href="resume.html" class="cta-btn">View My Resume</a>
+  </header>
 
-    <!-- About Me -->
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a BS Information Technology graduate with experience in software testing, front-end development, and administrative work. My goal is to ensure quality and functionality in every project I work on, whether it's testing applications or developing systems.</p>
-    </section>
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I’m a BS Information Technology graduate focusing on software testing and front-end development. I like turning requirements into clear test scenarios and building simple, user-friendly interfaces.</p>
+  </section>
 
-    <!-- Projects Carousel -->
-    <section id="projects">
-  <h2>My Projects</h2>
-  <div class="carousel-container">
-    <div class="carousel-slide fade">
-      <img src="images/calculator-placeholder.jpg" alt="Calculator Testing">
-      <div class="caption">
-        <h3>Calculator Testing</h3>
-        <p>Manual and functional test cases for a basic calculator application.</p>
+  <!-- PROJECTS (CAROUSEL) -->
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="carousel" id="projectsCarousel">
+      <button class="nav-btn prev" aria-label="Previous slide">&#10094;</button>
+
+      <div class="track">
+        <!-- Slide 1 -->
+        <article class="slide">
+          <img
+            src="https://via.placeholder.com/960x520?text=Calculator+Testing"
+            alt="Calculator Testing placeholder"
+            class="slide-img"
+          />
+          <div class="caption">
+            <h3>Calculator Testing</h3>
+            <p>Manual & functional test cases for a simple calculator application.</p>
+            <p>
+              <a href="https://github.com/glytantio/calculator-testing" target="_blank" rel="noopener">View on GitHub</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="slide">
+          <img
+            src="https://via.placeholder.com/960x520?text=Flight+Booking+Training+System"
+            alt="Flight Booking Training System placeholder"
+            class="slide-img"
+          />
+          <div class="caption">
+            <h3>Flight Booking Training System</h3>
+            <p>Capstone project simulating a flight reservation flow for training.</p>
+            <p>
+              <a href="#" target="_blank" rel="noopener">View Details</a>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <button class="nav-btn next" aria-label="Next slide">&#10095;</button>
+
+      <div class="dots" role="tablist" aria-label="Carousel Pagination">
+        <button class="dot" data-index="0" aria-label="Slide 1"></button>
+        <button class="dot" data-index="1" aria-label="Slide 2"></button>
       </div>
     </div>
+  </section>
 
-    <div class="carousel-slide fade">
-      <img src="images/flight-placeholder.jpg" alt="Flight Booking Training System">
-      <div class="caption">
-        <h3>Flight Booking Training System</h3>
-        <p>Capstone project developed for training purposes in booking flight reservations.</p>
-      </div>
-    </div>
-
-    <!-- Navigation arrows -->
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-  </div>
-
-  <!-- Dots -->
-  <div class="dots">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-  </div>
-</section>
-
-    <!-- Contact Section -->
-    <footer class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:lkd11242000@gmail.com">lkd11242000@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/glytantio" target="_blank">linkedin.com/in/glytantio</a></p>
-        <p>GitHub: <a href="https://github.com/glytantio" target="_blank">github.com/glytantio</a></p>
-    </footer>
+  <!-- CONTACT -->
+  <footer class="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:lkd11242000@gmail.com">lkd11242000@gmail.com</a> •
+      GitHub: <a href="https://github.com/glytantio" target="_blank">github.com/glytantio</a> •
+      LinkedIn: <a href="https://www.linkedin.com/in/glytantio" target="_blank">linkedin.com/in/glytantio</a>
+    </p>
+  </footer>
 </body>
 </html>
