@@ -189,3 +189,26 @@ main {
     height: 400px;
   }
 }
+
+/* Resume Page - Download Button */
+.resume-download {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-dark {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #222;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-dark:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
