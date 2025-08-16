@@ -1,37 +1,58 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+// script.js — robust carousel logic
 
-// Next/prev controls
-function changeSlide(n) {
-  showSlides(slideIndex += n);
-}
+(function () {
+  const root = document.getElementById('projectsCarousel');
+  if (!root) return;
 
-// Dot controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+  const track = root.querySelector('.track');
+  const slides = Array.from(root.querySelectorAll('.slide'));
+  const prevBtn = root.querySelector('.prev');
+  const nextBtn = root.querySelector('.next');
+  const dots = Array.from(root.querySelectorAll('.dot'));
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("carousel-slide");
-  let dots = document.getElementsByClassName("dot");
+  let index = 0;
+  let timer;
 
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  function update() {
+    // Move the track
+    track.style.transform = `translateX(-${index * 100}%)`;
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    // Update dots
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
   }
 
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  function go(n) {
+    index = (n + slides.length) % slides.length;
+    update();
+    restartAuto();
   }
 
-  slides[slideIndex - 1].style.display = "block";  
-  dots[slideIndex - 1].className += " active";
-}
+  function next() { go(index + 1); }
+  function prev() { go(index - 1); }
 
-// Auto-slide
-setInterval(() => {
-  changeSlide(1);
-}, 4000); // 4 seconds
+  function startAuto() {
+    timer = setInterval(next, 4000); // auto-advance every 4s
+  }
+
+  function stopAuto() {
+    clearInterval(timer);
+  }
+
+  function restartAuto() {
+    stopAuto();
+    startAuto();
+  }
+
+  // Events
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
+
+  // Pause on hover (desktop)
+  root.addEventListener('mouseenter', stopAuto);
+  root.addEventListener('mouseleave', startAuto);
+
+  // Init
+  update();
+  startAuto();
+})();
