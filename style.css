@@ -84,14 +84,12 @@ main {
 }
 
 /* Tagline under Hero name */
-.tagline {
-  display: inline-block;
-  background: #222;   /* same as button background */
-  color: #fff;        /* white text */
-  padding: 6px 14px;
-  border-radius: 20px;  /* pill shape */
-  font-size: 1rem;
+.hero .tagline {
+  color: #FFD700;   /* 🎨 Yellow (same as button) */
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-top: 10px;
+  display: block;
 }
 
 /* About Me Section */
