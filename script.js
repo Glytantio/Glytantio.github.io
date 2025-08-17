@@ -1,17 +1,11 @@
-let slideIndex = 0;
-showSlide(slideIndex);
+let currentIndex = 0;
 
-function moveSlide(n) {
-  showSlide(slideIndex += n);
-}
+function moveSlide(direction) {
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
 
-function showSlide(n) {
-  let slides = document.getElementsByClassName("carousel-slide");
-  if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1 }
+  currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
-  slides[slideIndex].classList.add("active");
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
