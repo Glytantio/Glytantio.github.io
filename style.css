@@ -68,6 +68,17 @@ main {
   color: #444;
 }
 
+/* Tagline under Hero name */
+.tagline {
+  display: inline-block;
+  background: #222;   /* same as button background */
+  color: #fff;        /* white text */
+  padding: 6px 14px;
+  border-radius: 20px;  /* pill shape */
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
 /* Carousel Styling */
 .carousel-container {
   position: relative;
