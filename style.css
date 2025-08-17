@@ -84,12 +84,11 @@ main {
 }
 
 /* Tagline under Hero name */
-.hero .tagline {
-  color: #FFD700;   /* 🎨 Yellow (same as button) */
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 10px;
-  display: block;
+.tagline {
+  font-size: 1.2em;
+  margin: 10px 0 20px;
+  color: #f4c542; /* <-- same yellow as your buttons */
+  font-weight: bold;
 }
 
 /* About Me Section */
