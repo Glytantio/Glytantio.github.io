@@ -90,13 +90,11 @@ main {
 }
 
 /* Tagline under Hero name */
-.tagline {
+  .hero .tagline {
   font-size: 1.2em;
   margin: 10px 0 20px;
-  color: #ffcc00; /* matches button color */
+  color: #ffcc00 !important; /* same yellow as buttons */
   font-weight: bold;
-  text-shadow: 0 0 8px rgba(255, 204, 0, 0.7), 
-               0 0 16px rgba(255, 204, 0, 0.5);
 }
 
 /* About Me Section */
