@@ -21,6 +21,12 @@ a {
     text-decoration: none;
 }
 
+#projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
 /* === Header === */
 header, .hero {
   margin-top: 0;
