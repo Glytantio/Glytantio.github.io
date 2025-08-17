@@ -68,8 +68,8 @@ main {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 80px 20px;   /* space inside */
-  margin-top: 40px;     /* space below navbar */
+  padding: 80px 20px;
+  margin-top: 0;   /* ⬅ Remove the extra gap */
 }
 
 .hero h1 {
