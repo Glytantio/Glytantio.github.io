@@ -93,8 +93,10 @@ main {
 .tagline {
   font-size: 1.2em;
   margin: 10px 0 20px;
-  color: #f4c542; /* <-- same yellow as your buttons */
+  color: #ffcc00; /* matches button color */
   font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.7), 
+               0 0 16px rgba(255, 204, 0, 0.5);
 }
 
 /* About Me Section */
