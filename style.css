@@ -111,12 +111,6 @@ main {
   font-size: 1.8rem;
 }
 
-.about-text {
-  text-align: justify;  /* ✅ this makes the paragraph justified */
-  font-size: 1.1rem;
-  color: #333;
-}
-
 /* Carousel Styling */
 .carousel-container {
   position: relative;
