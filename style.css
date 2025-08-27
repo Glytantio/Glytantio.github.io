@@ -61,6 +61,12 @@ nav a:hover {
     color: #222;
 }
 
+/* Highlight the active page */
+nav a.active {
+  background-color: #f4c542; /* yellow background */
+  color: #222;              /* dark text */
+}
+
 /* === Main Container === */
 main {
     max-width: 1000px;
